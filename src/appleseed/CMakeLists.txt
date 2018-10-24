@@ -2078,6 +2078,7 @@ set (renderer_utility_sources
     renderer/utility/testutils.h
     renderer/utility/transformsequence.cpp
     renderer/utility/transformsequence.h
+    renderer/utility/transformsequencestack.h
     renderer/utility/triangle.h
 )
 list (APPEND appleseed_sources
