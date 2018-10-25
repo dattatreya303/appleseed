@@ -1269,6 +1269,12 @@ set (renderer_kernel_rendering_generic_sources
     renderer/kernel/rendering/generic/tilejobfactory.cpp
     renderer/kernel/rendering/generic/tilejobfactory.h
 )
+if (WITH_GPU)
+    list (APPEND renderer_kernel_rendering_generic_sources
+        renderer/kernel/rendering/generic/genericgpuframerenderer.cpp
+        renderer/kernel/rendering/generic/genericgpuframerenderer.h
+    )
+endif()
 list (APPEND appleseed_sources
     ${renderer_kernel_rendering_generic_sources}
 )
@@ -1285,6 +1291,12 @@ set (renderer_kernel_rendering_progressive_sources
     renderer/kernel/rendering/progressive/samplegeneratorjob.cpp
     renderer/kernel/rendering/progressive/samplegeneratorjob.h
 )
+if (WITH_GPU)
+    list (APPEND renderer_kernel_rendering_progressive_sources
+        renderer/kernel/rendering/progressive/progressivegpuframerenderer.cpp
+        renderer/kernel/rendering/progressive/progressivegpuframerenderer.h
+    )
+endif()
 list (APPEND appleseed_sources
     ${renderer_kernel_rendering_progressive_sources}
 )
@@ -1341,6 +1353,12 @@ set (renderer_kernel_rendering_sources
     renderer/kernel/rendering/timedrenderercontroller.cpp
     renderer/kernel/rendering/timedrenderercontroller.h
 )
+if (WITH_GPU)
+    list (APPEND renderer_kernel_rendering_sources
+        renderer/kernel/rendering/gpuframerendererbase.cpp
+        renderer/kernel/rendering/gpuframerendererbase.h
+    )
+endif()
 list (APPEND appleseed_sources
     ${renderer_kernel_rendering_sources}
 )
